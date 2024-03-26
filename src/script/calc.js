@@ -7,25 +7,43 @@ let operationValue = operatioClick
 function operatioClick(event) {
     let operationValue = event.target.textContent;
     let result
+    let operator = operationValue
+    
     
     if (firstValue === ''){
-        firstValue = parseFloat(inputValue);
+        firstValue = parseFloat((inputValue.join('')));
         inputValue = []
         display.value = 0
-        console.log('1 ='+firstValue)
     }else{
-        secondValue = parseFloat(inputValue);
-        result = firstValue += secondValue
+        secondValue = parseFloat((inputValue.join('')));
+
+        switch(operator){
+            case '+':
+                result = firstValue + secondValue;
+                break;
+            case '-':
+                result = firstValue - secondValue;
+                break;
+            case 'X':
+                result = firstValue * secondValue;
+                break;
+            case '/':
+                result = firstValue / secondValue;
+                break;
+            default:
+                result = "Nam"
+        }
+
         firstValue = secondValue
-        inputValue =[]
-        display.value = result
-        console.log(result)
+        inputValue =[]        
     }
     
     if(firstValue === secondValue){
         firstValue = result
-        console.log(result)
+        display.value = result
     }
+
+    console.log(operator)
 }
 
 for (let i = 0; i < value.length; i++) {
