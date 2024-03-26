@@ -1,0 +1,49 @@
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .btn, .btnact, .clean {
+    padding: 20px;
+    font-size: 18px;
+    width: 4rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn:hover {
+    opacity: 80%;
+  }
+
+  .clean:hover {
+    opacity: 80%;
+  }
+
+  .btnact:hover {
+    opacity: 80%;
+  }
+  
+  .along{
+    width: 8.5rem;
+    justify-content: flex-start
+  }
+
+  .func{
+    background-color: #d3750b;
+    color: #fff;
+  }
+
+  .numb{
+    background-color: #4b4b4b;
+    color: #fff;
+  }
+
+  .act{
+    background-color: #acacac;
+  }

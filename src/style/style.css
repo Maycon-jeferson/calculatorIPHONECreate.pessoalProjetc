@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+
+  .calculator {
+    width: 300px;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #fff;
+  }
+  

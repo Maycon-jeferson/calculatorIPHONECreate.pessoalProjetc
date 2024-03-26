@@ -1,0 +1,16 @@
+.display {
+    margin-bottom: 10px;
+    height: 5rem;
+    width: 100%;
+    font-size: 24px;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 3rem;
+    text-align: end;
+  }
+
+::placeholder{
+  color: #fff;
+}
+  
