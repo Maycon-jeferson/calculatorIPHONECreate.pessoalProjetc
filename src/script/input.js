@@ -31,6 +31,7 @@ const clean = document.getElementById("clean")
   clean.addEventListener('click', function ac(){
     firtValue = 0
     currentValue = 0
+    operator = ''
     result = 0
     inputValue = []
     display.value = 0
