@@ -5,7 +5,7 @@
     gap: 5px;
   }
   
-  .btn, .btnact, .clean {
+  .btn, .btnact, .clean, .func {
     padding: 20px;
     font-size: 18px;
     width: 4rem;
@@ -26,6 +26,10 @@
   }
 
   .btnact:hover {
+    opacity: 80%;
+  }
+
+  .func:hover {
     opacity: 80%;
   }
   

@@ -46,6 +46,6 @@ function operatioClick(event) {
     console.log(operator)
 }
 
-for (let i = 0; i < value.length; i++) {
-    value[i].addEventListener('click', operatioClick);
+for (let i = 0; i < operationValue.length; i++) {
+    operationValue[i].addEventListener('click', operatioClick);
 }

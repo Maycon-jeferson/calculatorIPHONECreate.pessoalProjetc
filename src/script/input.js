@@ -29,8 +29,9 @@ for (let i = 0; i < button.length; i++) {
 
 const clean = document.getElementById("clean")
   clean.addEventListener('click', function ac(){
+    firtValue = 0
+    currentValue = 0
+    result = 0
     inputValue = []
-    firstValue = ''
-    secondValue = ''
     display.value = 0
   })
