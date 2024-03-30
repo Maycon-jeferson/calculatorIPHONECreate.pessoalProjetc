@@ -10,29 +10,12 @@ function addInputValue(event) {
   if (inputValue.length > 9) {
     inputValue.splice(9);
   }
-  display.value = inputValue.join('')
+  display.value = parseFloat(inputValue.join(''))
+
+  console.log(display.value)
 }
 
 
 for (let i = 0; i < button.length; i++) {
   button[i].addEventListener('click', addInputValue);
 }
-
-// let fontSize = 30; // tamanho inicial da fonte
-//   display.style.fontSize = fontSize + 'px';
-//   while (arrayTextos.length > 6) {
-//     fontSize -= 10;
-//     display.style.fontSize = fontSize + 'px';
-//   }
-
-// ---------------------------------------------------------------------------------------------------
-
-const clean = document.getElementById("clean")
-  clean.addEventListener('click', function ac(){
-    firtValue = 0
-    currentValue = 0
-    operator = ''
-    result = 0
-    inputValue = []
-    display.value = 0
-  })

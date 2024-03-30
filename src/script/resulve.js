@@ -1,43 +1,48 @@
 let firtValue = 0
 let currentValue = 0
-let result
+let result = 0
 let operator = ''
+let currentOperator = ''
 
 let operationValue = document.getElementsByClassName('btnact');
 function operatioClick(event) {
     let value = event.target.textContent;
     operator = value
+    console.log('op '+operator)
     
     if(firtValue === 0){
-       firtValue = parseFloat(inputValue.join(''))
-       console.log('V'+firtValue)
+       firtValue = parseFloat(display.value)
+       console.log('V '+firtValue)
        inputValue = []
     }else if(firtValue !== 0){
-        currentValue = parseFloat(inputValue.join(''))
-        console.log('CV'+currentValue)
+        currentValue = parseFloat(display.value)
+        console.log('CV '+currentValue)
+        events()
+        operator = ''
     }
-    console.log(operator)
-
 }
+
+currentOperator = operator
+        console.log("cuOp "+currentOperator)
+
 
 function events(){
 
-
     switch(operator){
         case '+':
-            result = firtValue + parseFloat(inputValue.join(''))
+            result = firtValue + parseFloat(display.value)
         break
 
         case '-':
-            result = firtValue - parseFloat(inputValue.join(''))
+            result = firtValue - parseFloat(display.value)
         break
 
         case 'X':
-            result = firtValue * parseFloat(inputValue.join(''))
+            result = firtValue * parseFloat(display.value)
         break
 
         case '/':
-            result = firtValue / parseFloat(inputValue.join(''))
+            result = firtValue / parseFloat(display.value)
         break
 
         default:
@@ -46,12 +51,15 @@ function events(){
 
     
     display.value = result
-    console.log(result)
+    console.log('result = '+result)
 
     inputValue = []
     firtValue = result
     currentValue = parseFloat(display)
+    result = 0
 }
+
+
 
 for (let i = 0; i < operationValue.length; i++) {
     operationValue[i].addEventListener('click', operatioClick);
@@ -60,3 +68,12 @@ for (let i = 0; i < operationValue.length; i++) {
 let equalClick = document.getElementById('igual')
 equalClick.addEventListener('click', events)
 
+const clean = document.getElementById("clean")
+  clean.addEventListener('click', function ac(){
+    firtValue = 0
+    currentValue = 0
+    operator = ''
+    result = 0
+    inputValue = []
+    display.value = 0
+  })
